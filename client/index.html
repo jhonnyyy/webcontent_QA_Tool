@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Content Q&A System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>URL Content Q&A System</h1>
+        
+        <div class="input-section">
+            <h2>Step 1: Enter URLs</h2>
+            <textarea id="urlInput" placeholder="Enter URLs (one per line)" rows="5"></textarea>
+            <button id="processButton" onclick="processURLs()">Process URLs</button>
+            <div id="urlStatus" class="status"></div>
+        </div>
+
+        <div class="input-section">
+            <h2>Step 2: Ask Questions</h2>
+            <input type="text" id="questionInput" placeholder="Type your question here" disabled>
+            <button id="askButton" onclick="askQuestion()" disabled>Ask Question</button>
+            <div id="questionStatus" class="status"></div>
+        </div>
+
+        <div class="result-section">
+            <h2>Answer</h2>
+            <div id="answerBox" class="answer-box">
+                No answer yet. Please process URLs and ask a question.
+            </div>
+            <div id="confidenceScore" class="confidence"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
